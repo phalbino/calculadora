@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    form {
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      padding: 20px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    label {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      padding: 5px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 100%;
+    }
+    button[type="submit"] {
+      background-color: #4CAF50;
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    button[type="submit"]:last-of-type {
+      margin-right: 0;
+    }
+    button[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+<form method="post" action="/calcular">
+    <label>Número 1:</label>
+    <input type="text" name="num1"><br><br>
+    <label>Número 2:</label>
+    <input type="text" name="num2"><br><br>
+    <label>Operação:</label>
+    <div>
+        <button type="submit" name="operacao" value="soma">Somar</button>
+        <button type="submit" name="operacao" value="subtracao">Subtrair</button>
+    </div>
+</form>
+
+</body>
+</html>
